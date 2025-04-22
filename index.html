@@ -1,0 +1,558 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="Img/Yamaha-Logo.png" type="image/x-icon">
+    <title>Motos Yamaha - Rendimiento y Potencia</title>
+    <link rel="stylesheet" href="CSS/style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" rel="stylesheet">
+    
+</head>
+<body>
+    <!-- Top Bar -->
+    <div class="top-bar">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <span><i class="fas fa-envelope me-2"></i> info@motosyamaha.com</span>
+                    <span class="ms-3"><i class="fas fa-phone me-2"></i> (123) 456-7890</span>
+                </div>
+                <div class="col-md-6 text-end">
+                    <span><i class="fas fa-clock me-2"></i> Lun - Vie: 7:00 - 19:00, Sab: 8:00 - 4:00</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-3">
+                    <div class="logo">
+                        <!-- Simulando el logo de Yamaha con texto -->
+                        <h1 class="m-0 p-0" style="font-size: 2.5rem; font-weight: 900; color: #001e96;">
+                            <span style="color: #e60012;">YA</span>MAHA
+                        </h1>
+                    </div>
+                </div>
+                <div class="col-md-9 text-end">
+                    <div class="header-buttons-container">
+                        <div class="header-buttons">
+                            <a href="#contacto" class="btn btn-yamaha">Solicitar Informacion</a>
+                            <a href="https://maps.app.goo.gl/ygsoWHTSvMbzg8ZY6" class="btn btn-outline-dark" target="_blank">CONCESIONARIO</a>
+                            <div class="menu-toggle" id="menuToggle">
+                                <i class="fas fa-bars"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Main Navigation -->
+        <nav class="main-nav">
+            <div class="container">
+                <ul class="nav justify-content-center">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#inicio">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#video">Experiencia Yamaha</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#modelos">Modelos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#caracteristicas">Características</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#testimonios">Testimonios</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contacto">Contacto</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="inicio" class="hero-section">
+        <div class="hero-content">
+            <h1 class="hero-title animate__animated animate__fadeInDown">Domina <span style="color: var(--yamaha-red);">La Carretera</span></h1>
+            <p class="hero-subtitle animate__animated animate__fadeInUp animate__delay-1s">Experimenta la adrenalina de las legendarias motocicletas Yamaha</p>
+            <a href="#modelos" class="btn btn-yamaha btn-lg animate__animated animate__fadeInUp animate__delay-2s">Descubre Nuestra Gama</a>
+        </div>
+    </section>
+
+    <!-- Video Section -->
+    <section id="video" class="video-section">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8 text-center">
+                    <h2 class="section-title">La Experiencia Yamaha</h2>
+                </div>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-lg-10">
+                    <div class="video-container">
+                        <video width="100%" height="auto" autoplay muted loop>
+                            <source src="Img/Experiencia Yamaha en MotoFest IV _ 2018.mp4" type="video/mp4">
+                            Tu navegador no soporta la etiqueta de video.
+                        </video>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+     <!-- Motorcycles Section -->
+<section id="modelos" class="motorcycles-section">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6">
+                <h2 class="section-title" style="color: var(--yamaha-black);">Nuestros Modelos</h2>
+            </div>
+            <div class="col-lg-6 text-end">
+                <div class="motorcycle-categories">
+                    <button class="btn btn-outline-dark motorcycle-category-button active" data-category="todas">TODAS</button>
+                    <button class="btn btn-outline-dark motorcycle-category-button" data-category="todo-terreno">TODO TERRENO</button>
+                    <button class="btn btn-outline-dark motorcycle-category-button" data-category="urbana">URBANAS</button>
+                    <button class="btn btn-outline-dark motorcycle-category-button" data-category="deportiva">DEPORTIVAS</button>
+                    <button class="btn btn-outline-dark motorcycle-category-button" data-category="automatica">AUTOMATICAS</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="row mt-5 motorcycle-list"> 
+            <!-- Moto 1 - FZ VERSION 3.0 -->
+            <div class="col-md-4 motorcycle-item" data-categories="urbana">
+                <div class="motorcycle-card fade-in-up" style="animation-delay: 0.1s;">
+                    <div class="motorcycle-image">
+                        <img src="Img/FZ VERSION 3.0.png" alt="Yamaha FZ Version 3.0">
+                    </div>
+                    <div class="motorcycle-category">Urbana</div>
+                    <div class="card-body">
+                        <h3 class="card-title">FZ Version 3.0</h3>
+                        <p class="card-text">Agilidad y estilo para la ciudad, con diseño renovado y tecnología moderna.</p>
+                        <ul class="motorcycle-features">
+                            <li>Motor de 149cc, refrigerado por aire</li>
+                            <li>Inyección electrónica</li>
+                            <li>Freno de disco delantero y trasero</li>
+                            <li>Estilo naked agresivo</li>
+                        </ul>
+                        <div class="motorcycle-price">$11.700.000</div>
+                        <a href="#" class="btn btn-yamaha">Ver Detalles</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Moto 2 - FZ 250 -->
+            <div class="col-md-4 motorcycle-item" data-categories="urbana">
+                <div class="motorcycle-card fade-in-up" style="animation-delay: 0.3s;">
+                    <div class="motorcycle-image">
+                        <img src="Img/FZ 250.webp" alt="Yamaha FZ 250">
+                    </div>
+                    <div class="motorcycle-category">Urbana</div>
+                    <div class="card-body">
+                        <h3 class="card-title">FZ 250</h3>
+                        <p class="card-text">Potencia y control para dominar el asfalto, con un diseño imponente y un andar confortable.</p>
+                        <ul class="motorcycle-features">
+                            <li>Motor de 249cc, refrigerado por aire</li>
+                            <li>Inyección electrónica</li>
+                            <li>Freno de disco delantero y trasero con ABS</li>
+                            <li>Diseño robusto y moderno</li>
+                        </ul>
+                        <div class="motorcycle-price">$14.600.000</div>
+                        <a href="#" class="btn btn-yamaha">Ver Detalles</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Moto 3 - XTZ 150 -->
+            <div class="col-md-4 motorcycle-item" data-categories="todo-terreno">
+                <div class="motorcycle-card fade-in-up" style="animation-delay: 0.7s;">
+                    <div class="motorcycle-image">
+                        <img src="Img/XTZ150.webp" alt="Yamaha XTZ 150">
+                    </div>
+                    <div class="motorcycle-category">Todo Terreno</div>
+                    <div class="card-body">
+                        <h3 class="card-title">XTZ 150</h3>
+                        <p class="card-text">Aventura sin límites, con un motor potente y una suspensión que absorbe cualquier impacto.</p>
+                        <ul class="motorcycle-features">
+                            <li>Motor de 149cc, refrigerado por aire</li>
+                            <li>Inyección electrónica</li>
+                            <li>Suspensión delantera de largo recorrido</li>
+                            <li>Diseño off-road resistente</li>
+                        </ul>
+                        <div class="motorcycle-price">$12.900.000</div>
+                        <a href="#" class="btn btn-yamaha">Ver Detalles</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Moto 4 - XTZ 250 -->
+            <div class="col-md-4 motorcycle-item" data-categories="todo-terreno">
+                <div class="motorcycle-card fade-in-up" style="animation-delay: 0.9s;">
+                    <div class="motorcycle-image">
+                        <img src="Img/XTZ250.webp" alt="Yamaha XTZ 250">
+                    </div>
+                    <div class="motorcycle-category">Todo Terreno</div>
+                    <div class="card-body">
+                        <h3 class="card-title"> XTZ 250</h3>
+                        <p class="card-text">Conquista cualquier desafío, con un motor de 250cc y un chasis diseñado para la aventura.</p>
+                        <ul class="motorcycle-features">
+                            <li>Motor de 249cc, refrigerado por aire/aceite</li>
+                            <li>Inyección electrónica</li>
+                            <li>Suspensión de largo recorrido</li>
+                            <li>Ideal para viajes y off-road</li>
+                        </ul>
+                        <div class="motorcycle-price">$25.500.000</div>
+                        <a href="#" class="btn btn-yamaha">Ver Detalles</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Moto 5 - NMAX Connected -->
+            <div class="col-md-4 motorcycle-item" data-categories="automatica, urbana">
+                <div class="motorcycle-card fade-in-up" style="animation-delay: 1.1s;">
+                    <div class="motorcycle-image">
+                        <img src="Img/Nmax Connected.webp" alt="Yamaha NMAX Connected">
+                    </div>
+                    <div class="motorcycle-category">Automática</div>
+                    <div class="card-body">
+                        <h3 class="card-title"> NMAX Connected</h3>
+                        <p class="card-text">Conectividad y confort para tus trayectos diarios, con un diseño moderno y tecnología inteligente.</p>
+                        <ul class="motorcycle-features">
+                            <li>Motor de 155cc, Blue Core</li>
+                            <li>Conectividad Bluetooth</li>
+                            <li>Sistema Smart Key</li>
+                            <li>Frenos ABS</li>
+                        </ul>
+                        <div class="motorcycle-price">$16.100.000</div>
+                        <a href="#" class="btn btn-yamaha">Ver Detalles</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Moto 6 - XMAX 300 -->
+            <div class="col-md-4 motorcycle-item" data-categories="automatica, urbana">
+                <div class="motorcycle-card fade-in-up" style="animation-delay: 1.3s;">
+                    <div class="motorcycle-image">
+                        <img src="Img/Xmax 300.png" alt="Yamaha XMAX 300">
+                    </div>
+                    <div class="motorcycle-category">Automatica</div>
+                    <div class="card-body">
+                        <h3 class="card-title"> XMAX 300</h3>
+                        <p class="card-text">Potencia y elegancia para tus desplazamientos urbanos y viajes cortos, con un amplio espacio de almacenamiento.</p>
+                        <ul class="motorcycle-features">
+                            <li>Motor de 292cc, refrigerado por líquido</li>
+                            <li>Horquilla tipo motocicleta</li>
+                            <li>Sistema de control de tracción (TCS)</li>
+                            <li>Encendido sin llave</li>
+                        </ul>
+                        <div class="motorcycle-price">$34.000.000</div>
+                        <a href="#" class="btn btn-yamaha">Ver Detalles</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Moto 7 - MT-15 -->
+            <div class="col-md-4 motorcycle-item" data-categories="deportiva">
+                <div class="motorcycle-card fade-in-up" style="animation-delay: 1.5s;">
+                    <div class="motorcycle-image">
+                        <img src="Img/MT15.webp" alt="Yamaha MT-15">
+                    </div>
+                    <div class="motorcycle-category">Deportiva</div>
+                    <div class="card-body">
+                        <h3 class="card-title"> MT-15</h3>
+                        <p class="card-text">Estilo Hyper Naked para la ciudad, con un motor ágil y un diseño que atrae todas las miradas.</p>
+                        <ul class="motorcycle-features">
+                            <li>Motor de 155cc, refrigerado por líquido</li>
+                            <li>VVA (Variable Valve Actuation)</li>
+                            <li>Diseño agresivo MT</li>
+                            <li>Horquilla invertida</li>
+                        </ul>
+                        <div class="motorcycle-price">$15.500.000</div>
+                        <a href="#" class="btn btn-yamaha">Ver Detalles</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Moto 8 - MT09-SP -->
+            <div class="col-md-4 motorcycle-item" data-categories="deportiva">
+                <div class="motorcycle-card fade-in-up" style="animation-delay: 1.7s;">
+                    <div class="motorcycle-image">
+                        <img src="Img/MT09SP.webp" alt="Yamaha MT-SP">
+                    </div>
+                    <div class="motorcycle-category">Deportiva</div>
+                    <div class="card-body">
+                        <h3 class="card-title">MT09-SP</h3>
+                        <p class="card-text">El lado oscuro de Japón en su máxima expresión, con un diseño radical y un rendimiento emocionante.</p>
+                        <ul class="motorcycle-features">
+                            <li>Suspensiones Öhlins</li>
+                            <li>Motor Crossplane</li>
+                            <li>Acabados exclusivos</li>
+                        </ul>
+                        <div class="motorcycle-price">$67.000.000</div>
+                        <a href="#" class="btn btn-yamaha">Ver Detalles</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Moto 9 - MT-07 -->
+            <div class="col-md-4 motorcycle-item" data-categories="deportiva">
+                <div class="motorcycle-card fade-in-up" style="animation-delay: 1.9s;">
+                    <div class="motorcycle-image">
+                        <img src="Img/MT07.webp" alt="Yamaha MT-07">
+                    </div>
+                    <div class="motorcycle-category">Deportiva</div>
+                    <div class="card-body">
+                        <h3 class="card-title"> MT-07</h3>
+                        <p class="card-text">Un motor de dos cilindros en línea CP2 que ofrece una gran capacidad de respuesta.</p>
+                        <ul class="motorcycle-features">
+                            <li>Motor CP2 de 689cc</li>
+                            <li>Diseño minimalista</li>
+                        </ul>
+                        <div class="motorcycle-price">$50.000.000</div>
+                        <a href="#" class="btn btn-yamaha">Ver Detalles</a>
+                    </div>
+                </div>
+            </div>
+        </div> <!-- END OF THE .row -->
+    </div>
+</section>
+
+<!-- Features Section -->
+<section id="caracteristicas" class="features-section">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-6 text-center">
+                <h2 class="section-title">¿Por Qué Elegir Yamaha?</h2>
+                <p class="mb-5">Desde 1955, Yamaha ha sido sinónimo de innovación, calidad y rendimiento en el mundo de las dos ruedas.</p>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-4">
+                <div class="feature-box fade-in-left" style="animation-delay: 0.1s;">
+                    <div class="feature-icon">
+                        <i class="fas fa-tachometer-alt"></i>
+                    </div>
+                    <h3 class="feature-title">Rendimiento Extremo</h3>
+                    <p>Los motores Yamaha son reconocidos mundialmente por su potencia, fiabilidad y eficiencia.</p>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="feature-box fade-in-up" style="animation-delay: 0.3s;">
+                    <div class="feature-icon">
+                        <i class="fas fa-cogs"></i>
+                    </div>
+                    <h3 class="feature-title">Tecnología Avanzada</h3>
+                    <p>Yamaha lidera el mercado con innovaciones que mejoran la experiencia de conducción.</p>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="feature-box fade-in-right" style="animation-delay: 0.5s;">
+                    <div class="feature-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3 class="feature-title">Seguridad y Confianza</h3>
+                    <p>Cada moto está diseñada con los más altos estándares de seguridad para protegerte en cada viaje.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+         <!-- Testimonials Section -->
+        <section id="testimonios" class="testimonials-section">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-lg-6 text-center">
+                        <h2 class="section-title" style="color: var(--yamaha-black);">Lo Que Dicen Nuestros Clientes</h2>
+                        <p class="mb-5">Descubre las experiencias de quienes ya disfrutan de la pasión y el rendimiento de Yamaha.</p>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <!-- Testimonio 1 -->
+                    <div class="col-md-6">
+                        <div class="testimonial-card fade-in-left" style="animation-delay: 0.1s;">
+                            <div class="testimonial-text">
+                                "Desde que compré mi Yamaha MT-07, cada viaje se ha convertido en una aventura. ¡La potencia y la agilidad de esta moto son increíbles! Recomiendo Yamaha a todos los amantes de las motos."
+                            </div>
+                            <div class="testimonial-author">
+                                <div class="testimonial-avatar">
+                                    <img src="Img/Juan Perez (1).png" alt="Juan Pérez">
+                                </div>
+                                <div>
+                                    <div class="testimonial-name">Juan Pérez</div>
+                                    <div class="testimonial-position">Piloto Urbano</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Testimonio 2 -->
+                    <div class="col-md-6">
+                        <div class="testimonial-card fade-in-right" style="animation-delay: 0.3s;">
+                            <div class="testimonial-text">
+                                "Mi Yamaha XTZ-250  me ha llevado a lugares que nunca imaginé. Es una moto robusta, confiable y perfecta para explorar tanto carreteras como senderos. ¡Yamaha es sinónimo de calidad!"
+                            </div>
+                            <div class="testimonial-author">
+                                <div class="testimonial-avatar">
+                                    <img src="Img/Maria Gomez 1 (1).jpg" alt="María Gómez">
+                                </div>
+                                <div>
+                                    <div class="testimonial-name">María Gómez</div>
+                                    <div class="testimonial-position">Aventurera</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                    <!-- Testimonio 3 -->
+                    <div class="col-md-6">
+                        <div class="testimonial-card fade-in-left" style="animation-delay: 0.1s;">
+                            <div class="testimonial-text">
+                                "Comprar mi Yamaha fue la mejor decisión. La calidad, el diseño y la potencia son inigualables. ¡Yamaha es mi marca de confianza para siempre!"
+                            </div>
+                            <div class="testimonial-author">
+                                <div class="testimonial-avatar">
+                                    <img src="Img/Carlos (1).jpg" alt="Carlos Rodríguez">
+                                </div>
+                                <div>
+                                    <div class="testimonial-name">Carlos Rodríguez</div>
+                                    <div class="testimonial-position">Entusiasta de Yamaha</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contacto" class="contact-section">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-lg-6 text-center">
+                        <h2 class="section-title">Contáctanos</h2>
+                        <p class="mb-5">¿Tienes alguna pregunta o deseas solicitar una prueba? ¡Estamos aquí para ayudarte!</p>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="contact-info fade-in-left" style="animation-delay: 0.1s;">
+                            <div class="contact-method">
+                                <div class="contact-icon">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                </div>
+                                <div class="contact-details">
+                                    <h4>Dirección</h4>
+                                    <p>A 22b-143, Cl 28 #22b-1, <br>Sincelejo - Sucre, Colombia</p>
+                                </div>
+                            </div>
+
+                            <div class="contact-method">
+                                <div class="contact-icon">
+                                    <i class="fas fa-phone"></i>
+                                </div>
+                                <div class="contact-details">
+                                    <h4>Teléfono</h4>
+                                    <p>(123) 456-7890</p>
+                                </div>
+                            </div>
+
+                            <div class="contact-method">
+                                <div class="contact-icon">
+                                    <i class="fas fa-envelope"></i>
+                                </div>
+                                <div class="contact-details">
+                                    <h4>Correo Electrónico</h4>
+                                    <p>info@motosyamaha.com</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-8">
+                        <div class="contact-form fade-in-right" style="animation-delay: 0.3s;">
+                            <form id="contactForm">
+                                <div class="mb-3">
+                                    <input type="text" class="form-control" id="name" placeholder="Nombre" required>
+                                </div>
+                                <div class="mb-3">
+                                    <input type="email" class="form-control" id="email" placeholder="Correo Electrónico" required>
+                                </div>
+                                <div class="mb-3">
+                                    <textarea class="form-control" id="message" rows="5" placeholder="Mensaje" required></textarea>
+                                </div>
+                                <button type="submit" class="btn btn-yamaha btn-submit-red">Enviar Mensaje</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-4">
+                        <h3 class="footer-title">Acerca de Yamaha</h3>
+                        <p>Desde 1955, Yamaha ha sido líder en la innovación y la calidad en el mundo de las motocicletas. Nuestra pasión por el rendimiento y la excelencia nos impulsa a crear motos que superan las expectativas.</p>
+                    </div>
+                    <div class="col-md-4">
+                        <h3 class="footer-title">Enlaces Útiles</h3>
+                        <ul class="footer-links">
+                            <li><a href="#">Nuestros Modelos</a></li>
+                            <li><a href="#">Tecnología Yamaha</a></li>
+                            <li><a href="#">Encuentra un Concesionario</a></li>
+                            <li><a href="#">Solicitar una Prueba</a></li>
+                            <li><a href="#">Contacto</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-md-4">
+                        <h3 class="footer-title">Suscríbete</h3>
+                        <p>Recibe las últimas noticias y ofertas especiales directamente en tu bandeja de entrada.</p>
+                        <div class="footer-newsletter">
+                            <div class="input-group">
+                                <input type="email" class="form-control" placeholder="Tu correo electrónico">
+                                <button class="btn btn-yamaha" type="button">Suscribirse</button>
+                            </div>
+                        </div>
+                        <div class="footer-social">
+                            <a href="#"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fab fa-instagram"></i></a>
+                            <a href="#"><i class="fab fa-linkedin"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="copyright text-center">
+                    © 2024 Yamaha Motos. Todos los derechos reservados.
+                </div>
+            </div>
+        </footer>
+
+        <!-- ScrollTop Button -->
+        <div id="scrollTop">
+            <i class="fas fa-arrow-up"></i>
+        </div>
+
+        <!-- Scripts -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+        <script src="JS/yamaha.js"></script>
+
+    </body>
+    </html>

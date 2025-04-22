@@ -1,0 +1,1171 @@
+:root {
+    --yamaha-red: #e60012;
+    --yamaha-blue: #001e96;
+    --yamaha-black: #111111;
+    --yamaha-white: #ffffff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    line-height: 1.6;
+    overflow-x: hidden;
+    background-color: var(--yamaha-white);
+}
+
+.top-bar {
+    background-color: var(--yamaha-black);
+    color: var(--yamaha-white);
+    padding: 6px 0;
+    font-size: 0.9rem;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.top-bar a {
+    color: var(--yamaha-white);
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.top-bar i {
+    margin-right: 5px;
+}
+
+.header {
+    padding: 0;
+    background-color: var(--yamaha-white);
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.header-logo {
+    height: 60px;
+    margin: 10px 0;
+    text-align: center; 
+}
+
+.main-nav {
+    display: flex;
+    justify-content: center;
+    background-color: var(--yamaha-blue);
+}
+
+.main-nav .nav-link {
+    color: var(--yamaha-white);
+    font-weight: 600;
+    text-transform: uppercase;
+    padding: 15px 25px;
+    margin: 0 5px;
+    position: relative;
+    letter-spacing: 1px;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.main-nav .nav-link:hover {
+    color: var(--yamaha-red);
+    background-color: rgba(255,255,255,0.1);
+    transform: translateY(-2px);
+}
+
+.main-nav .nav-link::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 3px;
+    bottom: 0;
+    left: 50%;
+    background-color: var(--yamaha-red);
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    transform: translateX(-50%);
+}
+
+.main-nav .nav-link:hover::after {
+    width: 70%;
+}
+
+.hero-section {
+    position: relative;
+    height: 80vh;
+    min-height: 600px;
+    overflow: hidden;
+    background: linear-gradient(to right, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.4) 50%, rgba(0,0,0,0.2) 100%), url('https://via.placeholder.com/1920x1080') center/cover no-repeat;
+}
+
+.hero-content {
+    position: absolute;
+    top: 50%;
+    left: 10%;
+    transform: translateY(-50%);
+    max-width: 650px;
+    z-index: 1;
+}
+
+.hero-title {
+    font-size: 4.5rem;
+    font-weight: 800;
+    color: var(--yamaha-white);
+    text-transform: uppercase;
+    line-height: 1.1;
+    margin-bottom: 30px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+
+.hero-subtitle {
+    font-size: 1.8rem;
+    font-weight: 300;
+    color: var(--yamaha-white);
+    margin-bottom: 40px;
+}
+
+.btn-yamaha {
+    background-color: var(--yamaha-red);
+    color: var(--yamaha-white);
+    font-weight: 600;
+    text-transform: uppercase;
+    padding: 12px 30px;
+    border-radius: 0;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.btn-yamaha::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background-color: var(--yamaha-blue);
+    transition: all 0.4s;
+    z-index: -1;
+}
+
+.btn-yamaha:hover {
+    color: var(--yamaha-white);
+}
+
+.btn-yamaha:hover::before {
+    left: 0;
+}
+
+.btn {
+    background-color: var(--yamaha-red) !important;
+    border-color: var(--yamaha-red) !important;
+    color: var(--yamaha-white) !important;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1) !important;
+}
+
+.btn:hover {
+    background-color: #cc0000 !important;
+    border-color: #cc0000 !important;
+    color: var(--yamaha-white) !important;
+    transform: translateY(-3px) scale(1.02) !important;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2) !important;
+}
+
+.video-section {
+    background-color: var(--yamaha-black);
+    padding: 80px 0;
+    position: relative;
+}
+
+.video-section::before,
+.video-section::after {
+    content: '';
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    background-color: rgba(230, 0, 18, 0.1);
+    border-radius: 50%;
+    z-index: 0;
+}
+
+.video-section::before {
+    top: -100px;
+    left: -100px;
+}
+
+.video-section::after {
+    bottom: -100px;
+    right: -100px;
+}
+
+.section-title {
+    font-size: 3rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    margin-bottom: 50px;
+    position: relative;
+    display: inline-block;
+    color: var(--yamaha-white);
+}
+
+.section-title::after {
+    content: '';
+    position: absolute;
+    width: 80px;
+    height: 4px;
+    background-color: var(--yamaha-red);
+    bottom: -15px;
+    left: 0;
+}
+
+.video-container {
+    position: relative;
+    z-index: 1;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+    border: 5px solid var(--yamaha-white);
+}
+
+.video-container video {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Motorcycles Section */
+.motorcycles-section {
+    padding: 100px 0;
+    background-color: var(--yamaha-white);
+    position: relative;
+    overflow: hidden;
+}
+
+.dark-section {
+    background-color: var(--yamaha-black);
+    color: var(--yamaha-white);
+}
+
+.dark-section .section-title {
+    color: var(--yamaha-white);
+}
+
+.motorcycle-card {
+    position: relative;
+    border: none;
+    border-radius: 0;
+    overflow: hidden;
+    margin-bottom: 30px;
+    transition: all 0.4s;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+.motorcycle-card:hover {
+    transform: translateY(-15px) scale(1.02);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+}
+
+.motorcycle-image {
+    height: 250px;
+    overflow: hidden;
+}
+
+.motorcycle-card img {
+    transition: all 0.7s;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.motorcycle-card:hover img {
+    transform: scale(1.1);
+}
+
+.motorcycle-category {
+    position: absolute;
+    top: 20px;
+    right: 0;
+    background-color: var(--yamaha-red);
+    color: var(--yamaha-white);
+    padding: 5px 15px;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 0.8rem;
+}
+
+.motorcycle-card .card-body {
+    padding: 25px;
+}
+
+.motorcycle-card .card-title {
+    font-weight: 700;
+    font-size: 1.6rem;
+    margin-bottom: 15px;
+    color: var(--yamaha-blue);
+}
+
+.motorcycle-features {
+    margin: 20px 0;
+    padding: 0;
+    list-style: none;
+}
+
+.motorcycle-features li {
+    position: relative;
+    padding-left: 25px;
+    margin-bottom: 10px;
+    font-size: 0.9rem;
+}
+
+.motorcycle-features li:before {
+    content: '\f058';
+    font-family: 'Font Awesome 5 Free';
+    font-weight: 900;
+    position: absolute;
+    left: 0;
+    color: var(--yamaha-red);
+}
+
+.motorcycle-price {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--yamaha-red);
+    margin-bottom: 20px;
+}
+
+.motorcycle-categories {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    margin: 0 auto 30px;
+    flex-wrap: nowrap;
+    width: auto;
+}
+
+.motorcycle-categories .btn {
+    padding: 10px 25px;
+    font-size: 16px;
+    white-space: nowrap;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    margin: 0;
+}
+
+.motorcycle-categories .btn:hover {
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: 0 5px 15px rgba(230, 0, 18, 0.3);
+}
+
+/* Features Section */
+.features-section {
+    padding: 100px 0;
+    background: linear-gradient(135deg, var(--yamaha-blue) 0%, #0033cc 100%);
+    color: var(--yamaha-white);
+    position: relative;
+}
+
+.feature-box {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    padding: 40px 30px;
+    text-align: center;
+    margin-bottom: 30px;
+    transition: all 0.4s;
+    position: relative;
+    overflow: hidden;
+    height: 100%;
+    z-index: 1;
+}
+
+.feature-box:hover {
+    transform: translateY(-10px) scale(1.03);
+    background-color: rgba(255, 255, 255, 0.15);
+}
+
+.feature-box::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background-color: var(--yamaha-red);
+    transition: all 0.4s;
+}
+
+.feature-box:hover::before {
+    height: 10px;
+}
+
+.feature-icon {
+    width: 80px;
+    height: 80px;
+    line-height: 80px;
+    text-align: center;
+    background-color: var(--yamaha-red);
+    color: var(--yamaha-white);
+    font-size: 2.5rem;
+    border-radius: 50%;
+    margin: 0 auto 30px;
+    position: relative;
+    z-index: 1;
+}
+
+.feature-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+/* Testimonials Section */
+.testimonials-section {
+    padding: 100px 0;
+    background-color: var(--yamaha-white);
+    position: relative;
+}
+
+.testimonial-card {
+    background-color: var(--yamaha-white);
+    border-radius: 10px;
+    padding: 30px;
+    margin: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    position: relative;
+}
+
+.testimonial-text {
+    font-size: 1.1rem;
+    font-style: italic;
+    margin-bottom: 30px;
+    position: relative;
+    padding-top: 30px;
+}
+
+.testimonial-text::before {
+    content: '\f10d';
+    font-family: 'Font Awesome 5 Free';
+    font-weight: 900;
+    font-size: 2rem;
+    color: var(--yamaha-red);
+    position: absolute;
+    top: -10px;
+    left: -10px;
+    opacity: 0.2;
+}
+
+.testimonial-author {
+    display: flex;
+    align-items: center;
+}
+
+.testimonial-avatar {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-right: 20px;
+}
+
+.testimonial-name {
+    font-weight: 700;
+    margin-bottom: 5px;
+}
+
+.testimonial-position {
+    color: var(--yamaha-red);
+    font-size: 0.9rem;
+}
+
+/* Contact Section */
+.contact-section {
+    padding: 100px 0;
+    background-color: var(--yamaha-black);
+    color: var(--yamaha-white);
+    position: relative;
+}
+
+.contact-info {
+    position: relative;
+    margin-bottom: 30px;
+}
+
+.contact-method {
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.contact-icon {
+    width: 60px;
+    height: 60px;
+    background-color: var(--yamaha-red);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 20px;
+    flex-shrink: 0;
+}
+
+.contact-icon i {
+    font-size: 1.5rem;
+    color: var(--yamaha-white);
+}
+
+.contact-details h4 {
+    font-size: 1.2rem;
+    margin-bottom: 5px;
+}
+
+.contact-form .form-control {
+    background-color: rgba(236, 228, 228, 0.05); 
+    border: none;
+    border-radius: 0;
+    border-bottom: 2px solid rgba(239, 234, 234, 0.1); 
+    color: var(--yamaha-white); 
+    padding: 15px;
+    margin-bottom: 20px;
+}
+
+.contact-form .form-control:focus {
+    box-shadow: none;
+    border-bottom-color: var(--yamaha-red); 
+    background-color: rgba(244, 236, 236, 0.1); 
+    color: var(--yamaha-white); 
+}
+
+.contact-form ::placeholder {
+    color: #ffffff; 
+}
+
+/* For Textarea, apply same text color */
+.contact-form textarea.form-control {
+    color: var(--yamaha-white);
+}
+
+.contact-form textarea.form-control:focus {
+    color: var(--yamaha-white);
+}
+
+/* Footer */
+.footer {
+    background-color: var(--yamaha-black);
+    color: var(--yamaha-white);
+    padding: 60px 0 30px;
+}
+
+.footer-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 25px;
+    color: var(--yamaha-white);
+}
+
+.footer-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-links li {
+    margin-bottom: 15px;
+}
+
+.footer-links a {
+    color: rgba(255, 255, 255, 0.7);
+    text-decoration: none;
+    transition: all 0.3s;
+    position: relative;
+    padding-left: 15px;
+}
+
+.footer-links a:before {
+    content: '\f105';
+    font-family: 'Font Awesome 5 Free';
+    font-weight: 900;
+    position: absolute;
+    left: 0;
+    color: var(--yamaha-red);
+}
+
+.footer-links a:hover {
+    color: var(--yamaha-white);
+    padding-left: 20px;
+}
+
+.footer-social {
+    margin-top: 25px;
+}
+
+.footer-social a {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.1);
+    color: var(--yamaha-white);
+    border-radius: 50%;
+    margin-right: 10px;
+    transition: all 0.3s;
+}
+
+.footer-social a:hover {
+    background-color: var(--yamaha-red);
+    transform: translateY(-5px);
+}
+
+.footer-newsletter .form-control {
+    background-color: rgba(255, 255, 255, 0.05);
+    border: none;
+    border-radius: 0;
+    height: 50px;
+    color: var(--yamaha-white);
+}
+
+.footer-newsletter .btn {
+    height: 50px;
+    border-radius: 0;
+}
+
+.copyright {
+    padding-top: 30px;
+    margin-top: 60px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    font-size: 0.9rem;
+}
+
+/* Animation Classes */
+.fade-in-up {
+    animation: fadeInUp 1s both;
+}
+
+.fade-in-left {
+    animation: fadeInLeft 1s both;
+}
+
+.fade-in-right {
+    animation: fadeInRight 1s both;
+}
+
+/* ScrollTop Button */
+#scrollTop {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    width: 50px;
+    height: 50px;
+    background-color: var(--yamaha-red);
+    color: var(--yamaha-white);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 999;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s;
+}
+
+#scrollTop.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+#scrollTop:hover {
+    background-color: var(--yamaha-blue);
+}
+
+/* Reglas Responsivas */
+@media (max-width: 1200px) {
+    .hero-title {
+        font-size: 4rem;
+    }
+    .hero-subtitle {
+        font-size: 1.6rem;
+    }
+}
+
+@media (max-width: 992px) {
+    .header-buttons {
+        text-align: center;
+        margin-top: 15px;
+    }
+    
+    .main-nav {
+        justify-content: flex-start; 
+    }
+    
+    .main-nav .nav-link {
+        padding: 10px 15px;
+        font-size: 0.85rem;
+    }
+    
+    .hero-title {
+        font-size: 3.5rem;
+    }
+    
+    .hero-subtitle {
+        font-size: 1.5rem;
+    }
+    
+    .section-title {
+        font-size: 2.5rem;
+    }
+    
+    .motorcycle-categories {
+        flex-wrap: wrap;
+        gap: 10px;
+        width: 100%;
+    }
+
+    .motorcycle-categories .btn {
+        padding: 8px 20px;
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 768px) {
+    .top-bar {
+        padding: 5px;
+        font-size: 0.8rem;
+        gap: 10px;
+    }
+    
+    .header-logo {
+        height: 50px;
+    }
+    
+    .hero-title {
+        font-size: 2.5rem;
+    }
+    
+    .hero-subtitle {
+        font-size: 1.2rem;
+    }
+    
+    .section-title {
+        font-size: 2.2rem;
+    }
+    
+    .motorcycle-categories {
+        gap: 5px;
+    }
+    
+    .motorcycle-categories .btn {
+        padding: 6px 15px;
+        font-size: 12px;
+    }
+    
+    .motorcycle-card {
+        margin-bottom: 20px;
+    }
+    
+    .contact-info {
+        margin-bottom: 40px;
+    }
+    
+    .top-bar .col-md-6,
+    .header .col-md-3,
+    .header .col-md-9 {
+        text-align: center;
+        width: 100%;
+    }
+    
+    .main-nav {
+        display: none;
+    }
+    
+    .main-nav.active {
+        display: block;
+    }
+    
+    .main-nav ul {
+        flex-direction: column;
+    }
+    
+    .main-nav .nav-item {
+        margin: 5px 0;
+    }
+    
+    .menu-toggle {
+        display: block;
+        cursor: pointer;
+        padding: 10px;
+    }
+}
+
+@media (max-width: 576px) {
+    .top-bar {
+        flex-direction: column;
+        padding: 8px 5px;
+        font-size: 0.75rem;
+        gap: 8px;
+    }
+
+    .top-bar a {
+        width: 100%;
+        justify-content: center;
+    }
+    
+    .hero-title {
+        font-size: 2rem;
+    }
+    
+    .hero-subtitle {
+        font-size: 1rem;
+    }
+    
+    .main-nav .nav-link {
+        font-size: 0.7rem;
+        padding: 8px 12px;
+    }
+    
+    .section-title {
+        font-size: 1.75rem;
+    }
+    
+    .btn {
+        padding: 8px 16px;
+        font-size: 14px;
+    }
+    
+    .feature-box {
+        padding: 20px 15px;
+    }
+    
+    .testimonial-card {
+        padding: 20px;
+    }
+    
+    .contact-method {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .contact-icon {
+        margin-right: 0;
+        margin-bottom: 15px;
+    }
+
+    .motorcycle-categories {
+        gap: 3px;
+    }
+
+    .motorcycle-categories .btn {
+        padding: 5px 12px;
+        font-size: 11px;
+    }
+}
+
+/* Ajustes para imágenes responsivas */
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Ajustes para formularios responsivos */
+.form-control {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+@media (max-width: 768px) {
+    .form-control {
+        font-size: 16px;
+    }
+}
+
+/* Estilos para el menú hamburguesa y botones del header */
+.header-buttons {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 15px;
+}
+
+.header-buttons .btn {
+    white-space: nowrap;
+    transition: all 0.3s ease;
+}
+
+.menu-toggle {
+    display: none;
+    cursor: pointer;
+    padding: 8px 12px;
+    margin-left: 10px;
+}
+
+.menu-toggle i {
+    font-size: 20px;
+    color: var(--yamaha-blue);
+    transition: all 0.3s ease;
+}
+
+/* Media queries para dispositivos móviles */
+@media (max-width: 768px) {
+    .header .container {
+        display: flex;
+        align-items: center;
+        padding: 10px 0;
+    }
+
+    .header-buttons-container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .header-buttons {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        margin: 0;
+    }
+
+    .menu-toggle {
+        display: flex;
+        align-items: center;
+        margin-left: 10px;
+    }
+
+    .header-buttons .btn,
+    .header-buttons .btn-yamaha {
+        font-size: 12px;
+        padding: 8px 15px;
+    }
+
+    .main-nav {
+        display: none;
+        width: 100%;
+        background-color: var(--yamaha-blue);
+        position: absolute;
+        top: 100%;
+        left: 0;
+        z-index: 1000;
+    }
+
+    .main-nav.active {
+        display: block;
+    }
+
+    .main-nav ul {
+        flex-direction: column;
+        padding: 0;
+        margin: 0;
+    }
+
+    .main-nav .nav-item {
+        margin: 0;
+        width: 100%;
+        text-align: center;
+    }
+
+    .main-nav .nav-link {
+        padding: 15px;
+        margin: 0;
+        width: 100%;
+        border-bottom: 1px solid rgba(255,255,255,0.1);
+    }
+}
+
+@media (max-width: 576px) {
+    .header-buttons .btn,
+    .header-buttons .btn-yamaha {
+        font-size: 11px;
+        padding: 6px 12px;
+    }
+
+    .menu-toggle {
+        padding: 6px 10px;
+    }
+
+    .menu-toggle i {
+        font-size: 18px;
+    }
+}
+
+/* Mantener el menú normal en pantallas grandes */
+@media (min-width: 769px) {
+    .menu-toggle {
+        display: none !important;
+    }
+
+    .main-nav {
+        display: flex !important;
+    }
+}
+
+/* Animaciones Mejoradas */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(60px) scale(0.95);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+@keyframes fadeInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-60px) scale(0.95);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0) scale(1);
+    }
+}
+
+@keyframes fadeInRight {
+    from {
+        opacity: 0;
+        transform: translateX(60px) scale(0.95);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0) scale(1);
+    }
+}
+
+@keyframes scaleIn {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* Clases para elementos animados */
+.animate-on-scroll {
+    opacity: 0;
+    transition: all 1s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.fade-in-up {
+    transform: translateY(60px) scale(0.95);
+}
+
+.fade-in-left {
+    transform: translateX(-60px) scale(0.95);
+}
+
+.fade-in-right {
+    transform: translateX(60px) scale(0.95);
+}
+
+/* Clase para cuando el elemento es visible */
+.animate-on-scroll.is-visible {
+    opacity: 1;
+    transform: translate(0, 0) scale(1);
+}
+
+/* Aplicar animaciones a secciones específicas */
+.video-section,
+.motorcycles-section,
+.features-section,
+.testimonials-section,
+.contact-section {
+    opacity: 0;
+    transform: translateY(60px) scale(0.95);
+    transition: all 1.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.motorcycle-card {
+    opacity: 0;
+    transform: translateY(40px) scale(0.95);
+    transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.motorcycle-card:hover {
+    transform: translateY(-15px) scale(1.02);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+}
+
+.feature-box {
+    opacity: 0;
+    transform: translateY(40px) scale(0.95);
+    transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.feature-box:hover {
+    transform: translateY(-10px) scale(1.03);
+    background-color: rgba(255, 255, 255, 0.15);
+}
+
+.testimonial-card {
+    opacity: 0;
+    transform: translateY(40px) scale(0.95);
+    transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.testimonial-card:hover {
+    transform: translateY(-5px) scale(1.02);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.15);
+}
+
+/* Clase para elementos visibles */
+.is-visible {
+    opacity: 1 !important;
+    transform: translate(0, 0) scale(1) !important;
+}
+
+/* Delays para elementos en secuencia */
+.delay-1 {
+    transition-delay: 0.2s;
+}
+
+.delay-2 {
+    transition-delay: 0.4s;
+}
+
+.delay-3 {
+    transition-delay: 0.6s;
+}
+
+/* Transiciones mejoradas para botones */
+.btn {
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1) !important;
+}
+
+.btn:hover {
+    transform: translateY(-3px) scale(1.02) !important;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2) !important;
+}
+
+.motorcycle-categories .btn {
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.motorcycle-categories .btn:hover {
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: 0 5px 15px rgba(230, 0, 18, 0.3);
+}
+
+/* Transiciones para enlaces del menú */
+.main-nav .nav-link {
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.main-nav .nav-link:hover {
+    transform: translateY(-2px);
+}
+
+.main-nav .nav-link::after {
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
